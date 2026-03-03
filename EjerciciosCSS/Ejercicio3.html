@@ -1,82 +1,44 @@
-/*-------------------------------------------------------------
-General
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-body { }
-ul { margin: 0; padding: 0; list-style: none; }
-ul li { margin: 0; padding: 0; list-style: none; }
-h1, h2, h3, p, form { margin: 0; padding: 0; }
-.clear { clear: both; }
-img { border: none; }
-/*-------------------------------------------------------------
-Layout
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#contenedor {
-width: 90%;
-max-width: 900px;
-width: expression(document.body.clientWidth > 901? "900px": "auto");
-margin: 0 auto;
-}
-#cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario,
-#pie {
-border: 2px solid #777;
-padding: .5em;
-}
+/* 1. #cabecera con relleno de 1em en todos los lados */
 #cabecera {
-clear: both;
-padding: 1em;
+  padding: 1em;
 }
+
+/* 2. #menu con relleno de 0.5em y margen inferior de 0.5em */
 #menu {
-clear: both;
-padding: 1em;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
 }
-#lateral {
-float: left;
-width: 18%;
+
+/* 3. Todos los elementos con 0.5em de relleno */
+#lateral,
+#contenido,
+#principal,
+#secundario {
+  padding: 0.5em;
 }
-#contenido {
-float: right;
-width: 79%;
-padding: 0;
-}
-#contenido #principal {
-float: left;
-width: 73%;
-}
-#contenido #secundario {
-float: right;
-width: 20%;
-}
+
+/* #pie solo relleno arriba y abajo */
 #pie {
-clear: both;
-padding: .5em 0;
-margin-top: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
-/*-------------------------------------------------------------
-Enlaces
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*-------------------------------------------------------------
-Secciones
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*Cabecera
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#cabecera #logo { float: left; }
-#cabecera #buscador { float: right; }
-/*Menu
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#menu ul#menu_principal { }
-#menu ul#menu_principal li { display: inline; float: left; }
-/*Contenidos
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*Principal
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#contenido #principal .articulo img { width: 100px; float: left; margin: .5em; }
-#contenido #principal .articulo { margin-bottom: 1em; }
-/*Secundario
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*Lateral
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#lateral #publicidad { margin-top: 1em; }
-/*Pie
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#pie .enlaces { float: left; }
-#pie .copyright { float: right; }
+
+/* 4. Separación entre artículos de 1em */
+.articulo {
+  margin-bottom: 1em;
+}
+
+/* 5. Imágenes con margen de 0.5em en todos los lados */
+.articulo img {
+  margin: 0.5em;
+}
+
+/* 6. #publicidad separado 1em por arriba */
+#publicidad {
+  margin-top: 1em;
+}
+
+/* 7. #pie con margen superior de 1em */
+#pie {
+  margin-top: 1em;
+}
