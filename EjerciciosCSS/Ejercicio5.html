@@ -1,96 +1,104 @@
-/*-------------------------------------------------------------
-General
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-body { }
-ul { margin: 0; padding: 0; list-style: none; }
-ul li { margin: 0; padding: 0; list-style: none; }
-h1, h2, h3, p, form { margin: 0; padding: 0; }
-.clear { clear: both; }
-img { border: none; }
-/*-------------------------------------------------------------
-Layout
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#contenedor {
-width: 90%;
-max-width: 900px;
-width: expression(document.body.clientWidth > 901? "900px": "auto");
-margin: 0 auto;
-}
-#cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario,
-#pie {
-padding: .5em;
-}
-#cabecera {
-clear: both;
-padding: 1em;
-}
-#menu {
-clear: both;
-padding: .5em;
-margin-bottom: .5em;
-border-bottom: 1px solid #004C99;
-background: #003366 url(imagenes/fondo_menu.gif);
-}
-#lateral {
-float: left;
-width: 18%;
-}
-#contenido {
-float: right;
-width: 79%;
-padding: 0;
-}
-#contenido #principal {
-float: left;
-width: 73%;
-}
-#contenido #secundario {
-float: right;
-width: 20%;
-}
-#pie {
-clear: both;
-padding: .5em 0;
-margin-top: 1em;
-border-top: 1px solid #C5C5C5;
-border-bottom: 1px solid #C5C5C5;
-background: #F8F8F8;
-}
-/*-------------------------------------------------------------
-Enlaces
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*-------------------------------------------------------------
-Secciones
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*Cabecera
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#cabecera #logo { float: left; }
-#cabecera #buscador { float: right; }
-#cabecera #logo { background: transparent url(imagenes/logo.gif) no-repeat top left;
-width: 200px; height: 55px; }
-#cabecera #logo h1 span {visibility:hidden;}
-/*Menu
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#menu ul#menu_principal { }
-#menu ul#menu_principal li { display: inline; float: left; }
-/*Contenidos
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*Principal
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#contenido #principal .articulo img { width: 100px; float: left; margin: .5em; }
-#contenido #principal .articulo { margin-bottom: 1em; border-bottom: thick solid
-#E5E5E5; }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-/*Secundario
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#contenido #secundario { border: 1px solid #CC6600; }
-#contenido #secundario h2 { background: #DB905C; padding: .2em; }
-/*Lateral
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#lateral #publicidad { margin-top: 1em; padding: .5em; border: 1px dashed #CC6600;
-background: #FFF6CD;}
-#lateral #noticias { padding: .5em; border: 1px solid #C5C5C5; background: #F8F8F8; }
-/*Pie
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-#pie .enlaces { float: left; }
-#pie .copyright { float: right; }
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 15.5</title>
+
+<style type="text/css">
+
+/* Fondo gris claro en noticias y pie */
+#noticias, #pie{
+background-color:#F8F8F8;
+}
+
+/* Fondo amarillo claro en publicidad */
+#publicidad{
+background-color:#FFF6CD;
+}
+
+/* Fondo naranja en los títulos del lateral */
+#secundario h2{
+background-color:#DB905C;
+padding:.2em;
+}
+
+/* Imagen de fondo del menú */
+#menu{
+background-image:url("fondo_menu.gif");
+background-repeat:repeat-x;
+}
+
+/* Logo como imagen de fondo */
+#cabecera h1{
+background-image:url("logo.gif");
+background-repeat:no-repeat;
+padding-left:120px;
+height:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="cabecera">
+<h1>Logotipo</h1>
+<input type="text" value="Buscar" />
+</div>
+
+<div id="menu">
+<a href="#">Lorem</a> |
+<a href="#">Ipsum</a> |
+<a href="#">Dolor</a> |
+<a href="#">Sit</a> |
+<a href="#">Amet</a>
+</div>
+
+<div id="contenido">
+
+<div id="lateral">
+
+<div id="noticias">
+<h3>Noticias</h3>
+<p>Noticia 1</p>
+<p>Noticia 2</p>
+<p>Noticia 3</p>
+</div>
+
+<div id="publicidad">
+<h3>Publicidad</h3>
+<p>Texto de publicidad</p>
+</div>
+
+</div>
+
+<div id="principal">
+
+<div class="articulo">
+<h2>Lorem ipsum dolor sit amet</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+<div class="articulo">
+<h2>Vivamus lobortis</h2>
+<p>Quisque eget erat sed elit fermentum faucibus.</p>
+</div>
+
+</div>
+
+<div id="secundario">
+<h2>Phasellus blandit</h2>
+<p>Contenido del lateral derecho.</p>
+</div>
+
+</div>
+
+<div id="pie">
+<p>© Copyright Lorem ipsum</p>
+</div>
+
+</body>
+</html>
