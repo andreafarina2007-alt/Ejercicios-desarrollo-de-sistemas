@@ -1,44 +1,136 @@
-/* 1. #cabecera con relleno de 1em en todos los lados */
-#cabecera {
-  padding: 1em;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 15.3</title>
+
+<style type="text/css">
+
+/* Contenedor general */
+#contenedor{
+width:90%;
+margin:auto;
 }
 
-/* 2. #menu con relleno de 0.5em y margen inferior de 0.5em */
-#menu {
-  padding: 0.5em;
-  margin-bottom: 0.5em;
+/* 1. Cabecera con relleno de 1em */
+#cabecera{
+padding:1em;
+border:1px solid #999;
 }
 
-/* 3. Todos los elementos con 0.5em de relleno */
+/* 2. Menú con relleno y margen inferior */
+#menu{
+padding:0.5em;
+margin-bottom:0.5em;
+border:1px solid #999;
+}
+
+/* 3. Resto de elementos con padding 0.5em */
 #lateral,
 #contenido,
 #principal,
-#secundario {
-  padding: 0.5em;
+#secundario{
+padding:0.5em;
+border:1px solid #999;
 }
 
-/* #pie solo relleno arriba y abajo */
-#pie {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+/* Pie solo padding arriba y abajo */
+#pie{
+padding-top:0.5em;
+padding-bottom:0.5em;
+border:1px solid #999;
 }
 
-/* 4. Separación entre artículos de 1em */
-.articulo {
-  margin-bottom: 1em;
+/* 4. Separación entre artículos */
+.articulo{
+margin-bottom:1em;
 }
 
-/* 5. Imágenes con margen de 0.5em en todos los lados */
-.articulo img {
-  margin: 0.5em;
+/* 5. Margen de imágenes */
+.articulo img{
+margin:0.5em;
+width:100px;
 }
 
-/* 6. #publicidad separado 1em por arriba */
-#publicidad {
-  margin-top: 1em;
+/* 6. Publicidad separada del elemento superior */
+#publicidad{
+margin-top:1em;
+border:1px solid #999;
+padding:0.5em;
 }
 
-/* 7. #pie con margen superior de 1em */
-#pie {
-  margin-top: 1em;
+/* 7. Pie con margen superior */
+#pie{
+margin-top:1em;
 }
+
+</style>
+
+</head>
+
+<body>
+
+<div id="contenedor">
+
+<div id="cabecera">
+<h1>Logotipo</h1>
+<input type="text" value="Buscar"/>
+</div>
+
+<div id="menu">
+<a href="#">Lorem</a> |
+<a href="#">Ipsum</a> |
+<a href="#">Dolor</a> |
+<a href="#">Sit</a> |
+<a href="#">Amet</a>
+</div>
+
+<div id="lateral">
+
+<div id="noticias">
+<h3>Noticias</h3>
+<p>Noticia 1</p>
+<p>Noticia 2</p>
+</div>
+
+<div id="publicidad">
+<h3>Publicidad</h3>
+<p>Texto de publicidad</p>
+</div>
+
+</div>
+
+<div id="contenido">
+
+<div id="principal">
+
+<div class="articulo">
+<h2>Lorem ipsum dolor sit amet</h2>
+<img src="imagen.jpg" alt="imagen"/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+<div class="articulo">
+<h2>Vivamus lobortis</h2>
+<p>Quisque eget erat sed elit fermentum faucibus.</p>
+</div>
+
+</div>
+
+<div id="secundario">
+<h3>Phasellus blandit</h3>
+<p>Texto de ejemplo del contenido secundario.</p>
+</div>
+
+</div>
+
+<div id="pie">
+<p>© Copyright Lorem ipsum</p>
+</div>
+
+</div>
+
+</body>
+</html>
