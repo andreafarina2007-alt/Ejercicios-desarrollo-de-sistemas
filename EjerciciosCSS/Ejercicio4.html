@@ -1,30 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 15.4 Bordes</title>
+
+<style type="text/css">
+
 /* 1. Eliminar el borde gris por defecto */
-* {
-  border: none;
+*{
+border:none;
 }
 
-/* 2. #menu con borde inferior azul */
-#menu {
-  border-bottom: 1px solid #004C99;
+/* Cabecera */
+#cabecera{
+padding:1em;
 }
 
-/* 3. #noticias con borde gris claro */
-#noticias {
-  border: 1px solid #C5C5C5;
+/* 2. Borde inferior azul en el menú */
+#menu{
+padding:0.5em;
+margin-bottom:0.5em;
+border-bottom:1px solid #004C99;
 }
 
-/* 4. #publicidad con borde rojo claro */
-#publicidad {
-  border: 1px solid #CC6600;
+/* 3. Borde gris claro en noticias */
+#noticias{
+border:1px solid #C5C5C5;
+padding:0.5em;
 }
 
-/* 5. #secundario con borde gris */
-#secundario {
-  border: 1px solid #C6C6C6;
+/* 4. Publicidad con borde discontinuo naranja */
+#publicidad{
+border:1px dashed #CC6600;
+margin-top:1em;
+padding:0.5em;
 }
 
-/* 6. #pie con borde superior e inferior gris claro */
-#pie {
-  border-top: 1px solid #C5C5C5;
-  border-bottom: 1px solid #C5C5C5;
+/* 5. Borde en el lateral secundario */
+#secundario{
+border:1px solid #C6C6C6;
+padding:0.5em;
 }
+
+/* Artículos */
+.articulo{
+margin-bottom:1em;
+}
+
+.articulo img{
+margin:0.5em;
+width:100px;
+}
+
+/* 6. Bordes superior e inferior en el pie */
+#pie{
+margin-top:1em;
+padding:0.5em 0;
+border-top:1px solid #C5C5C5;
+border-bottom:1px solid #C5C5C5;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="cabecera">
+<h1>Logotipo</h1>
+<input type="text" value="Buscar"/>
+</div>
+
+<div id="menu">
+<a href="#">Lorem</a> |
+<a href="#">Ipsum</a> |
+<a href="#">Dolor</a> |
+<a href="#">Sit</a> |
+<a href="#">Amet</a>
+</div>
+
+<div id="contenido">
+
+<div id="lateral">
+
+<div id="noticias">
+<h3>Noticias</h3>
+<p>Noticia 1</p>
+<p>Noticia 2</p>
+<p>Noticia 3</p>
+</div>
+
+<div id="publicidad">
+<h3>Publicidad</h3>
+<p>Texto de publicidad</p>
+</div>
+
+</div>
+
+<div id="principal">
+
+<div class="articulo">
+<h2>Lorem ipsum dolor sit amet</h2>
+<img src="imagen.jpg" alt="imagen"/>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+<div class="articulo">
+<h2>Vivamus lobortis</h2>
+<p>Quisque eget erat sed elit fermentum faucibus.</p>
+</div>
+
+</div>
+
+<div id="secundario">
+<h3>Phasellus blandit</h3>
+<p>Contenido secundario.</p>
+</div>
+
+</div>
+
+<div id="pie">
+<p>© Copyright Lorem ipsum</p>
+</div>
+
+</body>
+</html>
